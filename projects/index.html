@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Name</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .projects-container {
+            padding: 6rem 0 4rem;
+        }
+        .project-filters {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background: white;
+            border: 2px solid #2E8B57;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .filter-btn.active {
+            background: #2E8B57;
+            color: white;
+        }
+        .filter-btn:hover {
+            background: #e9f5f0;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - copy from your index.html -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="/" class="logo">YourName</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main class="projects-container">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A collection of GIS, data analysis, and environmental programming projects.</p>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="gis">GIS</button>
+                <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
+                <button class="filter-btn" data-filter="environmental">Environmental</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will load here dynamically -->
+                <div class="empty-state">
+                    <h3>No projects yet</h3>
+                    <p>Projects will appear here as you add them. Check back soon!</p>
+                    <a href="/" class="btn btn-primary">Return to Home</a>
+                </div>
+            </div>
+            
+            <!-- Template for future projects -->
+            <div style="margin-top: 4rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
+                <h3>Coming Soon</h3>
+                <p>Future projects will include:</p>
+                <ul>
+                    <li>Climate change vulnerability mapping</li>
+                    <li>Water quality analysis dashboard</li>
+                    <li>Species distribution modeling</li>
+                    <li>Urban sustainability metrics</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple project filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                // You'll implement filtering logic here as you add projects
+            });
+        });
+        
+        // Navigation toggle (copy from main.js)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Your Name</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .resume-container {
+            padding: 6rem 0 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .resume-section {
+            margin-bottom: 3rem;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        .skill-category {
+            display: inline-block;
+            background: #f0f7f0;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - copy from your index.html -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="/" class="logo">YourName</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main class="resume-container">
+        <div class="container">
+            <div class="resume-header">
+                <h1>Your Name</h1>
+                <p>GIS Analyst & Environmental Programmer</p>
+                <p>email@example.com | (123) 456-7890 | Location</p>
+                <a href="/assets/resume.pdf" class="btn btn-primary download-btn" download>
+                    <i class="fas fa-download"></i> Download PDF Version
+                </a>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Professional Summary</h2>
+                <p>Dedicated GIS professional with expertise in spatial analysis, environmental programming, and data visualization. Proven ability to transform complex environmental data into actionable insights.</p>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Technical Skills</h2>
+                <div>
+                    <h3>GIS & Spatial Analysis</h3>
+                    <span class="skill-category">ArcGIS Pro</span>
+                    <span class="skill-category">QGIS</span>
+                    <span class="skill-category">Geospatial Analysis</span>
+                    <span class="skill-category">Remote Sensing</span>
+                    <span class="skill-category">Spatial Statistics</span>
+                </div>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h3>Programming & Data Analysis</h3>
+                    <span class="skill-category">Python</span>
+                    <span class="skill-category">R</span>
+                    <span class="skill-category">SQL</span>
+                    <span class="skill-category">Pandas</span>
+                    <span class="skill-category">NumPy</span>
+                    <span class="skill-category">Matplotlib</span>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Experience</h2>
+                <div>
+                    <h3>Job Title 1</h3>
+                    <p><strong>Company Name</strong> | 2022 - Present</p>
+                    <ul>
+                        <li>Developed spatial models for environmental impact assessment</li>
+                        <li>Created automated data processing pipelines using Python</li>
+                        <li>Produced interactive dashboards for data visualization</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h3>Job Title 2</h3>
+                    <p><strong>Company Name</strong> | 2020 - 2022</p>
+                    <ul>
+                        <li>Conducted geospatial analysis for conservation projects</li>
+                        <li>Managed environmental databases</li>
+                        <li>Created custom GIS tools and scripts</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div>
+                    <h3>Degree Name</h3>
+                    <p><strong>University Name</strong> | 2018 - 2022</p>
+                    <p>Major: Environmental Science/Geography/GIS</p>
+                    <p>Relevant coursework: Spatial Analysis, Environmental Modeling, Data Science</p>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>GIS Professional (GISP) Certification</li>
+                    <li>Esri Technical Certification</li>
+                    <li>Python for Data Science Certificate</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

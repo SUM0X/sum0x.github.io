@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Your Name</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .about-container {
+            padding: 6rem 0 4rem;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .timeline {
+            margin: 2rem 0;
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            border-left: 3px solid #2E8B57;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation - copy from your index.html -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="/" class="logo">YourName</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main class="about-container">
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="about-grid">
+                <div>
+                    <h2>GIS Analyst & Environmental Programmer</h2>
+                    <p>I specialize in using geospatial data and programming to solve environmental challenges. My work combines technical expertise in GIS, data analysis, and environmental science to create meaningful insights and solutions.</p>
+                    
+                    <h3>Background</h3>
+                    <p>[Your educational background and experience here]</p>
+                    
+                    <h3>Philosophy</h3>
+                    <p>I believe that data-driven approaches are essential for understanding and addressing environmental issues. My goal is to bridge the gap between technical analysis and practical environmental solutions.</p>
+                </div>
+                
+                <div>
+                    <img src="/images/profile.jpg" alt="Your Name" class="profile-img">
+                    
+                    <div class="timeline">
+                        <h3>Education & Experience</h3>
+                        <div class="timeline-item">
+                            <h4>Current Position/Role</h4>
+                            <p>2023 - Present</p>
+                            <p>Brief description of your current work.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Degree/Program</h4>
+                            <p>2020 - 2023</p>
+                            <p>University Name, Major</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Template | Your Name</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #e6f2e6 0%, #f0f7ff 100%);
+            padding: 6rem 0 3rem;
+            margin-top: 60px;
+        }
+        .project-content {
+            padding: 4rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .code-snippet {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 2rem 0;
+            font-family: 'Source Code Pro', monospace;
+        }
+        .data-visualization {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Copy navigation from index.html -->
+    
+    <div class="project-header">
+        <div class="container">
+            <a href="index.html" class="btn btn-secondary">← Back to Projects</a>
+            <h1>Project Title</h1>
+            <p class="tagline">Brief project description that hooks the reader</p>
+            <div class="project-tags">
+                <span class="tag">GIS</span>
+                <span class="tag">Python</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Environmental</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="project-content">
+        <div class="container">
+            <div class="project-meta">
+                <div class="meta-item">
+                    <h4><i class="fas fa-calendar"></i> Timeline</h4>
+                    <p>Month Year - Month Year</p>
+                </div>
+                <div class="meta-item">
+                    <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                    <p>ArcGIS Pro, Python, Jupyter, PostgreSQL</p>
+                </div>
+                <div class="meta-item">
+                    <h4><i class="fas fa-database"></i> Data Sources</h4>
+                    <p>USGS, NOAA, OpenStreetMap</p>
+                </div>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>Detailed explanation of the project goals, context, and importance.</p>
+
+            <h2>Methodology</h2>
+            <p>Step-by-step explanation of your approach:</p>
+            <ol>
+                <li>Data collection and preprocessing</li>
+                <li>Analysis techniques used</li>
+                <li>Tools and algorithms applied</li>
+                <li>Validation methods</li>
+            </ol>
+
+            <h2>Code Sample</h2>
+            <div class="code-snippet">
+<pre><code>import geopandas as gpd
+import matplotlib.pyplot as plt
+from shapely.geometry import Point
+
+# Load spatial data
+gdf = gpd.read_file('data/sample.shp')
+
+# Perform spatial analysis
+buffer_zones = gdf.buffer(1000)  # 1km buffer
+
+# Create visualization
+fig, ax = plt.subplots(figsize=(10, 8))
+buffer_zones.plot(ax=ax, alpha=0.5)
+gdf.plot(ax=ax, color='red', markersize=5)
+plt.title('Spatial Analysis Results')
+plt.savefig('output/analysis_map.png', dpi=300)</code></pre>
+            </div>
+
+            <h2>Results & Visualizations</h2>
+            <div class="data-visualization">
+                <img src="../images/projects/map-visualization.png" alt="Map visualization" style="width: 100%;">
+                <p class="caption">Figure 1: Your map or chart with detailed caption</p>
+            </div>
+
+            <h2>Key Findings</h2>
+            <ul>
+                <li>Finding 1 with data-driven insight</li>
+                <li>Finding 2 with environmental impact</li>
+                <li>Finding 3 with policy implications</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <p>Discuss technical challenges and how you overcame them.</p>
+
+            <h2>Future Work</h2>
+            <p>Potential extensions or improvements to the project.</p>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
+                <h3>Project Links</h3>
+                <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    <a href="#" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Download Report</a>
+                    <a href="#" class="btn btn-secondary"><i class="fas fa-play-circle"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
